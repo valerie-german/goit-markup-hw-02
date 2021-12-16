@@ -1,0 +1,64 @@
+/* Кастомные css-свойства (переменные)*/
+:root {
+  /* Основной цвет текста */
+  --primary-text-color: #757575;
+  /* Цвет заголовков (кроме h1) */
+  --title-text-color: #212121;
+  /* Акцентный синий */
+  --accent-color: #2196f3;
+  /* Белый */
+  --primary-white-color: #ffffff;
+}
+
+/* Единственный глобальный стиль элемента */
+body {
+  background-color: var(--primary-white-color);
+  color: var(--primary-text-color);
+}
+/* Убирает маркеры в списках */
+.list {
+  list-style: none;
+}
+
+/* Чёрный в лого  #000000 */
+/* Белый #ffffff */
+/* Синий  #2196F3 */
+/* Серый заголовки #212121 */
+/* Серый текст  #757575*/
+/* Фон футера #2F303A */
+/* Фон блока Наша команда #F5F4FA */
+
+/* Стилизация элементов хедера */
+.logo {
+  color: #000000;
+}
+
+.site-nav .link {
+  color: var(--title-text-color);
+}
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+.site-nav .link:hover,
+.site-nav .link:focus,
+.contacts .link:hover,
+.contacts .link:focus {
+  color: var(--accent-color);
+}
+
+/* Стилизация заголовков */
+.section-title,
+.features .title,
+.team .title {
+  color: var(--title-text-color);
+}
+.hero-title {
+  color: var(--primary-white-color);
+  background-color: #2f303a;
+}
+
+/* Стилизация кнопки */
+.button {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
