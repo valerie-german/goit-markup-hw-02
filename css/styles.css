@@ -10,12 +10,17 @@
   --primary-white-color: #ffffff;
   /* Серый дополнительный */
   --secondary-bg-grey: #f5f4fa;
+  /* Цвет фона футера и героя */
+  --footer-bg-color: #2f303a;
 }
 
 /* Единственный глобальный стиль элемента */
 body {
   background-color: var(--primary-white-color);
   color: var(--primary-text-color);
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-style: normal;
+  font-size: 16px;
 }
 /* Убирает маркеры в списках */
 .list {
@@ -30,16 +35,41 @@ body {
 /* Фон футера #2F303A */
 /* Фон блока Наша команда #F5F4FA + фон неактивных кнопок */
 
-/* Стилизация элементов хедера */
+/* -----------------Header----------------- */
+/* logo */
 .logo {
+  text-decoration: none;
   color: #000000;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+.logo .word-web {
+  color: var(--accent-color);
 }
 
+.site-nav {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
 .site-nav .link {
   color: var(--title-text-color);
 }
 .site-nav .link.current {
   color: var(--accent-color);
+}
+
+.contacts .link {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 .site-nav .link:hover,
 .site-nav .link:focus,
@@ -47,36 +77,126 @@ body {
 .contacts .link:focus {
   color: var(--accent-color);
 }
-
-/* Стилизация заголовков */
+/* -----------------------Main------------------- */
+/* Цвет заголовков */
 .section-title,
 .title {
   color: var(--title-text-color);
 }
+/* Заголовок героя */
 .hero-title {
   color: var(--primary-white-color);
-  background-color: #2f303a;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.hero {
+  background-color: var(--footer-bg-color);
 }
 
 /* Стилизация кнопки, общие свойства*/
 .button {
-  /* размер шрифта */
+  font-family: inherit;
+  font-style: normal;
+  cursor: pointer;
 }
 /* Кнопка Заказать Услугу (синяя) */
 .primary.button {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  /* align-items: center; */
+  text-align: center;
+  letter-spacing: 0.06em;
 }
-/* .primary.button:hover,
-   .primary.button:focus {
-} не нарисовано */
+.primary.button:hover,
+.primary.button:focus {
+  background-color: #188ce8;
+  color: var(--primary-white-color);
+}
 /* Кнопки фильтра в Портфолио (серые) */
 .secondary.button {
   background-color: var(--secondary-bg-grey);
   color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 .secondary.button:hover,
 .secondary.button:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
+}
+/* Преимущества */
+.features .title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.features .lead {
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+}
+/* Заголовки и подзаголовки секций Вид деятельности и Наша команда */
+.services .section-title,
+.team .section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.team .title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  letter-spacing: 0.03em;
+}
+.team .subtitle {
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  letter-spacing: 0.03em;
+}
+/* Фон секции Наша команда */
+.section.team {
+  background-color: var(--secondary-bg-grey);
+}
+
+/* Портфолио */
+.cases .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(36 / 18);
+  letter-spacing: 0.06em;
+}
+.cases .subtitle {
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.03em;
+}
+/* --------------------------Footer---------------------- */
+.footer {
+  background-color: var(--footer-bg-color);
+}
+
+.address {
+  all: initial;
+  font-family: inherit;
+  font-style: normal;
+}
+.footer .list {
+  text-decoration: none;
+}
+.footer .contact {
+  text-decoration: none;
 }
