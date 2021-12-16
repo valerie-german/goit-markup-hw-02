@@ -6,8 +6,10 @@
   --title-text-color: #212121;
   /* Акцентный синий */
   --accent-color: #2196f3;
-  /* Белый */
+  /* Белый основной*/
   --primary-white-color: #ffffff;
+  /* Серый дополнительный */
+  --secondary-bg-grey: #f5f4fa;
 }
 
 /* Единственный глобальный стиль элемента */
@@ -26,7 +28,7 @@ body {
 /* Серый заголовки #212121 */
 /* Серый текст  #757575*/
 /* Фон футера #2F303A */
-/* Фон блока Наша команда #F5F4FA */
+/* Фон блока Наша команда #F5F4FA + фон неактивных кнопок */
 
 /* Стилизация элементов хедера */
 .logo {
@@ -48,8 +50,7 @@ body {
 
 /* Стилизация заголовков */
 .section-title,
-.features .title,
-.team .title {
+.title {
   color: var(--title-text-color);
 }
 .hero-title {
@@ -57,8 +58,25 @@ body {
   background-color: #2f303a;
 }
 
-/* Стилизация кнопки */
+/* Стилизация кнопки, общие свойства*/
 .button {
+  /* размер шрифта */
+}
+/* Кнопка Заказать Услугу (синяя) */
+.primary.button {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
+/* .primary.button:hover,
+   .primary.button:focus {
+} не нарисовано */
+/* Кнопки фильтра в Портфолио (серые) */
+.secondary.button {
+  background-color: var(--secondary-bg-grey);
+  color: var(--title-text-color);
+}
+.secondary.button:hover,
+.secondary.button:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
