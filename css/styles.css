@@ -19,24 +19,16 @@ body {
   background-color: var(--primary-white-color);
   color: var(--primary-text-color);
   font-family: 'Roboto', 'Arial', sans-serif;
-  font-style: normal;
   font-size: 16px;
+  letter-spacing: 0.03em;
 }
 /* Убирает маркеры в списках */
 .list {
   list-style: none;
 }
 
-/* Чёрный в лого  #000000 */
-/* Белый #ffffff */
-/* Синий  #2196F3 */
-/* Серый заголовки #212121 */
-/* Серый текст  #757575*/
-/* Фон футера #2F303A */
-/* Фон блока Наша команда #F5F4FA + фон неактивных кнопок */
-
-/* -----------------Header----------------- */
-/* logo */
+/* --------------------1. Header----------------------- */
+/* 1.1. logo */
 .logo {
   text-decoration: none;
   color: #000000;
@@ -49,9 +41,8 @@ body {
 .logo .word-web {
   color: var(--accent-color);
 }
-
-.site-nav {
-  text-decoration: none;
+/* 1.2. Навигация */
+.list.site-nav {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -59,13 +50,15 @@ body {
 }
 .site-nav .link {
   color: var(--title-text-color);
+  text-decoration: none;
 }
 .site-nav .link.current {
   color: var(--accent-color);
 }
-
+/* 1.3. Контакты */
 .contacts .link {
   color: var(--primary-text-color);
+  text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -77,41 +70,44 @@ body {
 .contacts .link:focus {
   color: var(--accent-color);
 }
-/* -----------------------Main------------------- */
-/* Цвет заголовков */
+
+/* -----------------------2. Main------------------- */
+/* 2.1. Цвет заголовков */
 .section-title,
 .title {
   color: var(--title-text-color);
 }
-/* Заголовок героя */
+
+/*2.2. Герой */
+.hero {
+  background-color: var(--footer-bg-color);
+  text-align: center;
+}
+/* 2.2.1. Заголовок героя */
 .hero-title {
   color: var(--primary-white-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
+  /* text-align: center; */
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-.hero {
-  background-color: var(--footer-bg-color);
-}
 
-/* Стилизация кнопки, общие свойства*/
+/* 2.3. Стилизация кнопки, общие свойства*/
 .button {
   font-family: inherit;
-  font-style: normal;
+  letter-spacing: inherit;
   cursor: pointer;
+  text-align: center;
 }
-/* Кнопка Заказать Услугу (синяя) */
+/* 2.3.1. Кнопка Заказать Услугу (синяя) */
 .primary.button {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  /* align-items: center; */
-  text-align: center;
   letter-spacing: 0.06em;
 }
 .primary.button:hover,
@@ -119,60 +115,55 @@ body {
   background-color: #188ce8;
   color: var(--primary-white-color);
 }
-/* Кнопки фильтра в Портфолио (серые) */
+/* 2.3.2. Кнопки фильтра в Портфолио (серые) */
 .secondary.button {
   background-color: var(--secondary-bg-grey);
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
-  text-align: center;
-  letter-spacing: 0.03em;
 }
 .secondary.button:hover,
 .secondary.button:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
-/* Преимущества */
+
+/* 2.4. Секция Преимущества */
 .features .title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 .features .lead {
   font-size: 14px;
   line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
 }
-/* Заголовки и подзаголовки секций Вид деятельности и Наша команда */
+/* 2.5. Заголовки и подзаголовки секций Вид деятельности и Наша команда */
 .services .section-title,
 .team .section-title {
   font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
-  letter-spacing: 0.03em;
 }
+
+/* Без font-size меняет кегль на 18.72px, откуда берётся это значение? */
 .team .title {
   font-weight: 500;
-  font-size: 16px;
+  font-size: inherit;
   line-height: calc(19 / 16);
-  letter-spacing: 0.03em;
 }
 .team .subtitle {
-  font-size: 16px;
   line-height: calc(19 / 16);
-  letter-spacing: 0.03em;
 }
 /* Фон секции Наша команда */
 .section.team {
   background-color: var(--secondary-bg-grey);
 }
 
-/* Портфолио */
+/* 2.6. Портфолио */
 .cases .title {
   font-weight: 700;
   font-size: 18px;
@@ -180,23 +171,37 @@ body {
   letter-spacing: 0.06em;
 }
 .cases .subtitle {
-  font-size: 16px;
   line-height: calc(30 / 16);
-  letter-spacing: 0.03em;
 }
-/* --------------------------Footer---------------------- */
+
+/* --------------------------3. Footer---------------------- */
 .footer {
   background-color: var(--footer-bg-color);
 }
-
+/* Обнуление стилей address */
 .address {
-  all: initial;
+  /* all: initial; */
   font-family: inherit;
-  font-style: normal;
+  font-style: inherit;
+  font-size: 14px;
+  line-height: 1.71;
 }
-.footer .list {
+/* Локация */
+.location .link {
+  color: var(--primary-white-color);
   text-decoration: none;
 }
-.footer .contact {
+/* Контакты */
+.contact .link {
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+}
+/* Стили при наведении */
+.location .link:hover,
+.location .link:focus {
+  color: var(--accent-color);
+}
+.contact .link:hover,
+.contact .link:focus {
+  color: var(--accent-color);
 }
