@@ -29,17 +29,18 @@ body {
 
 /* --------------------1. Header----------------------- */
 /* 1.1. logo */
-.logo {
+.logo-header,
+.logo-footer {
   text-decoration: none;
-  color: #000000;
+  color: var(--accent-color);
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
-.logo .word-web {
-  color: var(--accent-color);
+.logo-header .word-studio {
+  color: #000000;
 }
 /* 1.2. Навигация */
 .list.site-nav {
@@ -177,6 +178,9 @@ body {
 /* --------------------------3. Footer---------------------- */
 .footer {
   background-color: var(--footer-bg-color);
+}
+.logo-footer .word-studio {
+  color: var(--primary-white-color);
 }
 /* Обнуление стилей address */
 .address {
